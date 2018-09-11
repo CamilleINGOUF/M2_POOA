@@ -9,7 +9,7 @@ public class ExempleAF {
 		Checkbox check = fac.getCheckbox();
 		Button button = fac.getButton();
 		
-		check.add();
+		check.check();
 		button.add();
 	}
 

@@ -3,9 +3,9 @@ package AbstractFactory;
 public class MacOSCheckbox extends Checkbox {
 
 	@Override
-	public void add() 
+	public void check() 
 	{
-		System.out.println("You added a MacOS checkbox.");
+		System.out.println("You checked a MacOS checkbox.");
 	}
 
 }
