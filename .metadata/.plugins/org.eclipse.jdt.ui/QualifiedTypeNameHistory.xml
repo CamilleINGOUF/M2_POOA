@@ -1,2 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="ComportementVol"/>
+    <fullyQualifiedTypeName name="ComportementCancan"/>
+    <fullyQualifiedTypeName name="Coincoin"/>
+    <fullyQualifiedTypeName name="VolerAvecDesAiles"/>
+    <fullyQualifiedTypeName name="CanardMuet"/>
+    <fullyQualifiedTypeName name="Colvert"/>
+    <fullyQualifiedTypeName name="Mandarin"/>
+    <fullyQualifiedTypeName name="Canard"/>
+    <fullyQualifiedTypeName name="NePasVoler"/>
+    <fullyQualifiedTypeName name="CanardEnPlastique"/>
+    <fullyQualifiedTypeName name="Cancan"/>
+    <fullyQualifiedTypeName name="PrototypeCanard"/>
+    <fullyQualifiedTypeName name="PropulsionAReaction"/>
+    <fullyQualifiedTypeName name="ComportementArme"/>
+    <fullyQualifiedTypeName name="Roi"/>
+    <fullyQualifiedTypeName name="ComportementArcEtFleche"/>
+    <fullyQualifiedTypeName name="Reine"/>
+    <fullyQualifiedTypeName name="ComportementPoignard"/>
+    <fullyQualifiedTypeName name="Chevalier"/>
+    <fullyQualifiedTypeName name="ComportementEpee"/>
+    <fullyQualifiedTypeName name="Troll"/>
+    <fullyQualifiedTypeName name="ComportementHache"/>
+    <fullyQualifiedTypeName name="Personnage"/>
+    <fullyQualifiedTypeName name="java.awt.geom.Point2D"/>
+    <fullyQualifiedTypeName name="org.testfx.service.adapter.impl.JavafxRobotAdapter"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
+    <fullyQualifiedTypeName name="FactoryMethod.Animal"/>
+    <fullyQualifiedTypeName name="AbstractFactory.DocumentPDF"/>
+    <fullyQualifiedTypeName name="AbstractFactory.EditorPDF"/>
+    <fullyQualifiedTypeName name="AbstractFactory.EditorCSV"/>
+    <fullyQualifiedTypeName name="AbstractFactory.DocumentCSV"/>
+    <fullyQualifiedTypeName name="AbstractFactory.DocumentFactory"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="AbstractFactory.Extension"/>
+    <fullyQualifiedTypeName name="AbstractFactory.EditorFactory"/>
+    <fullyQualifiedTypeName name="AbstractFactory.WindowsButton"/>
+    <fullyQualifiedTypeName name="AbstractFactory.WindowsCheckbox"/>
+    <fullyQualifiedTypeName name="AbstractFactory.MacOSCheckbox"/>
+    <fullyQualifiedTypeName name="AbstractFactory.Factory"/>
+    <fullyQualifiedTypeName name="AbstractFactory.WindowsFactory"/>
+    <fullyQualifiedTypeName name="AbstractFactory.Checkbox"/>
+    <fullyQualifiedTypeName name="AbstractFactory.MacOSButton"/>
+    <fullyQualifiedTypeName name="AbstractFactory.MacOSFactory"/>
+</qualifiedTypeNameHistroy>

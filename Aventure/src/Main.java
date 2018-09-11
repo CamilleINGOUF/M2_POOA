@@ -13,7 +13,8 @@ public class Main
 		chevalier.setArme(new ComportementEpee());
 		Personnage troll = new Troll();
 		troll.setArme(new ComportementHache());
-		persos.add(roi);persos.add(reine);persos.add(chevalier);persos.add(troll);
+		persos.add(roi);persos.add(reine);
+		persos.add(chevalier);persos.add(troll);
 	
 		for(Personnage p : persos)
 		{
