@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item value="/home/camille/Downloads/jdk-8u181-linux-x64/jdk1.8.0_181/jre/lib/ext" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="/home/camille/Downloads/openjfx-11_linux-x64_bin-sdk/javafx-sdk-11/lib" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="560,578" key="UserLibraryLoadSaveDialog.size"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="false" key="updateQualifiedNames"/>
 		<item value="*" key="patterns"/>

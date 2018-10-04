@@ -43,4 +43,11 @@
     <fullyQualifiedTypeName name="AbstractFactory.Checkbox"/>
     <fullyQualifiedTypeName name="AbstractFactory.MacOSButton"/>
     <fullyQualifiedTypeName name="AbstractFactory.MacOSFactory"/>
+    <fullyQualifiedTypeName name="javafx.scene.shape.TriangleMesh"/>
+    <fullyQualifiedTypeName name="javafx.scene.control.Button"/>
+    <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="drawing.TriangleButtonHandler"/>
+    <fullyQualifiedTypeName name="javafx.scene.shape.Polygon"/>
+    <fullyQualifiedTypeName name="java.util.Iterator"/>
+    <fullyQualifiedTypeName name="java.lang.Iterable"/>
 </qualifiedTypeNameHistroy>
