@@ -11,7 +11,7 @@ import java.util.Iterator;
 /**
  * Created by lewandowski on 20/12/2017.
  */
-public class DrawingPane extends Pane implements Iterable<Shape>{
+public class DrawingPane extends Pane implements Iterable<Shape> {
 
     private MouseMoveHandler mouseMoveHandler;
 

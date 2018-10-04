@@ -16,7 +16,7 @@ public class TriangleButtonHandler extends ShapeButtonHandler {
         double width = Math.abs(destinationX - originX);
         double height = Math.abs(destinationY - originY);
         Polygon triangle = new Polygon();
-        triangle.getPoints().addAll(new Double[] {x,y,x+width,y,x+width/2,y-height});
+        triangle.getPoints().addAll(new Double[] {x,y+height,x+width,y+height,x+width/2,y});
         triangle.getStyleClass().add("triangle");
 		return triangle;
 	}
