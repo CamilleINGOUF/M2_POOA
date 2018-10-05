@@ -2,6 +2,7 @@ package drawing;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
+import javafx.event.EventType;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -12,7 +13,7 @@ import javafx.stage.Stage;
 /**
  * Created by lewandowski on 20/12/2017.
  */
-public class PaintApplication extends Application {
+public class PaintApplication extends Application{
 
     public static final int WIDTH = 800;
     public static final int HEIGHT = 600;
@@ -25,6 +26,8 @@ public class PaintApplication extends Application {
     private Button rectangleButton;
     private Button circleButton;
     private Button triangleButton;
+    
+    private StatusBar statusBar;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -40,7 +43,7 @@ public class PaintApplication extends Application {
 
         HBox hBox = new HBox();
         clearButton = new Button("Clear");
-        clearButton.setOnAction(event -> drawingPane.clear());
+        clearButton.addEventFilter(ActionEvent.ACTION, new ClearButtonHandler(drawingPane));
         rectangleButton = new Button("Rectangle");
         rectangleButton.addEventFilter(ActionEvent.ACTION, new RectangleButtonHandler(drawingPane));
         circleButton = new Button("Circle");
@@ -52,6 +55,9 @@ public class PaintApplication extends Application {
         hBox.setSpacing(5.0);
         hBox.getStyleClass().add("toolbar");
         root.setTop(hBox);
+        
+        statusBar = new StatusBar(drawingPane);
+        root.setBottom(statusBar);
 
         primaryStage.setTitle("Drawing");
         primaryStage.setScene(scene);
