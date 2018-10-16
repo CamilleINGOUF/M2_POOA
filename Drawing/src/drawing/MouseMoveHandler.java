@@ -16,7 +16,6 @@ public class MouseMoveHandler implements EventHandler<MouseEvent> {
     private double orgSceneX;
     private double orgSceneY;
 
-    private IShape selectedShape;
     private List<IShape> selectedShapes;
 
     public MouseMoveHandler(DrawingPane drawingPane) {

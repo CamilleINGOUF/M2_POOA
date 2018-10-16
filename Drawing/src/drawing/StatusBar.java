@@ -4,7 +4,6 @@ import java.util.stream.StreamSupport;
 
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
-import javafx.scene.shape.Shape;
 
 public class StatusBar extends HBox implements Observer{
 

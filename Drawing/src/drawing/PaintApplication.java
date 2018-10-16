@@ -2,7 +2,6 @@ package drawing;
 
 import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.event.EventType;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;

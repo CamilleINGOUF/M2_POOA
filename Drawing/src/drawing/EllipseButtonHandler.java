@@ -1,7 +1,6 @@
 package drawing;
 
 import javafx.scene.shape.Ellipse;
-import javafx.scene.shape.Shape;
 
 /**
  * Created by lewandowski on 20/12/2017.
