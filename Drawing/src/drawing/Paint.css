@@ -26,3 +26,7 @@
     -fx-stroke: green;
     -fx-stroke-width: 3;
 }
+
+.selected{ 
+	-fx-effect: dropshadow(gaussian,cornflowerblue,8,0.7,0,0); 
+}

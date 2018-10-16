@@ -22,7 +22,7 @@ public class StatusBar extends HBox implements Observer{
 	@Override
 	public void update() 
 	{
-		Iterable<Shape> newIterable = () -> dPane.iterator();
+		Iterable<IShape> newIterable = () -> dPane.iterator();
 		long count = StreamSupport.stream(newIterable.spliterator(), false).count();
 		status.setText("Number of Shape : "+count);
 	}

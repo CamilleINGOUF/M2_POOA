@@ -3,7 +3,6 @@ package drawing;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
 import javafx.scene.shape.Rectangle;
-import javafx.scene.shape.Shape;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,11 +11,12 @@ import java.util.List;
 /**
  * Created by lewandowski on 20/12/2017.
  */
-public class DrawingPane extends Pane implements Iterable<Shape>, Observable {
+public class DrawingPane extends Pane implements Iterable<IShape>, Observable {
 
     private MouseMoveHandler mouseMoveHandler;
+    private SelectionHandler selectionHandler;
 
-    private ArrayList<Shape> shapes;
+    private ArrayList<IShape> shapes;
     
     private List<Observer> observers;
 
@@ -24,7 +24,13 @@ public class DrawingPane extends Pane implements Iterable<Shape>, Observable {
         clipChildren();
         shapes = new ArrayList<>();
         mouseMoveHandler = new MouseMoveHandler(this);
+        selectionHandler = new SelectionHandler(this);
         observers = new ArrayList<>();
+    }
+    
+    public List<IShape> getSelection()
+    {
+    	return selectionHandler.getShapes();
     }
 
 
@@ -43,21 +49,22 @@ public class DrawingPane extends Pane implements Iterable<Shape>, Observable {
         });
     }
 
-    public void addShape(Shape shape) {
+    public void addShape(IShape shape) {
         shapes.add(shape);
-        this.getChildren().add(shape);
+        shape.addShapeToPane(this);
         notifyObservers();
     }
     
     public void clear() {
-        this.getChildren().removeAll(shapes);
+    	for(IShape shape : shapes)
+    		shape.remove(this);
         shapes.clear();
         notifyObservers();
     }
 
 
 	@Override
-	public Iterator<Shape> iterator() {
+	public Iterator<IShape> iterator() {
 		return shapes.iterator();
 	}
 
