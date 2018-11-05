@@ -10,9 +10,30 @@ public class ButtonFactory {
 	public static final String[] RECTANLGE = new String[] {"Rectangle","rectangle.png"};
 	public static final String[] CIRCLE = new String[] {"Circle","circle.png"};
 	public static final String[] TRIANGLE = new String[] {"Triangle","triangle.png"};
+
+	public static final int TEXT_ONLY = 0;
+	public static final int ICONS_ONLY = 1;
+	public static final int BOTH = 2;
+	
+	private int style;
+	
+	public ButtonFactory() {
+		style = BOTH;
+	}
+	
+	public ButtonFactory(int style) {
+		this.style = style;
+	}
 	
 	public Button createButton(String[] option) {
 		Image image = new Image(getClass().getResourceAsStream("../images/"+option[1]));
-		return new Button(option[0], new ImageView(image));
+		switch (this.style) {
+		case ICONS_ONLY:
+			return new Button("", new ImageView(image));
+		case TEXT_ONLY:
+			return new Button(option[0]);
+		default:
+			return new Button(option[0], new ImageView(image));
+		}
 	}
 }
