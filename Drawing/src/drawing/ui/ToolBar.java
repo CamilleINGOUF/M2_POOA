@@ -19,15 +19,18 @@ public class ToolBar extends HBox {
     private Button deleteButton;
 	
 	public ToolBar(DrawingPane drawingPane) {
-		clearButton = new Button("Clear");
+		
+		ButtonFactory factory = new ButtonFactory();
+		
+		clearButton = factory.createButton(ButtonFactory.CLEAR);
         clearButton.addEventFilter(ActionEvent.ACTION, new ClearButtonHandler(drawingPane));
-        rectangleButton = new Button("Rectangle");
+        rectangleButton = factory.createButton(ButtonFactory.RECTANLGE);
         rectangleButton.addEventFilter(ActionEvent.ACTION, new RectangleButtonHandler(drawingPane));
-        circleButton = new Button("Circle");
+        circleButton = factory.createButton(ButtonFactory.CIRCLE);
         circleButton.addEventFilter(ActionEvent.ACTION, new EllipseButtonHandler(drawingPane));
-        triangleButton = new Button("Triangle");
+        triangleButton = factory.createButton(ButtonFactory.TRIANGLE);
         triangleButton.addEventFilter(ActionEvent.ACTION, new TriangleButtonHandler(drawingPane));
-        deleteButton = new Button("Delete");
+        deleteButton = factory.createButton(ButtonFactory.DELETE);
         deleteButton.addEventFilter(ActionEvent.ACTION, new DeleteButtonHandler(drawingPane));
         
         this.getChildren().addAll(clearButton, rectangleButton, circleButton,triangleButton, deleteButton);
