@@ -73,8 +73,12 @@ public class DrawingPane extends Pane implements Iterable<IShape>, Observable {
 	public void addObserver(Observer o) {
 		observers.add(o);
 	}
-
-
+	
+	public SelectionHandler getSelectionHandler() 
+	{
+		return selectionHandler;
+	}
+	
 	@Override
 	public void notifyObservers() 
 	{
