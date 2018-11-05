@@ -1,11 +1,11 @@
-package drawing;
+package drawing.handlers;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
+import drawing.shapes.IShape;
+import drawing.ui.DrawingPane;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.event.EventHandler;
 
 public class DeleteButtonHandler implements EventHandler<ActionEvent> {

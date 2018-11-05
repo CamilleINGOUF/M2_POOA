@@ -1,5 +1,6 @@
-package drawing;
+package drawing.shapes;
 
+import drawing.ui.DrawingPane;
 import javafx.scene.shape.Shape;
 
 public class ShapeAdapter implements IShape {

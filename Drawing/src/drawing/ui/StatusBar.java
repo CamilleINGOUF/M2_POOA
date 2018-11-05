@@ -1,7 +1,9 @@
-package drawing;
+package drawing.ui;
 
 import java.util.stream.StreamSupport;
 
+import drawing.handlers.SelectionHandler;
+import drawing.shapes.IShape;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 

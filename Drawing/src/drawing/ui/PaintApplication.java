@@ -1,9 +1,5 @@
-package drawing;
+package drawing.ui;
 
-
-import drawing.ui.DrawingPane;
-import drawing.ui.StatusBar;
-import drawing.ui.ToolBar;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -30,7 +26,7 @@ public class PaintApplication extends Application{
         scene = new Scene(root, WIDTH, HEIGHT);
 
         root.getStylesheets().add(
-                PaintApplication.class.getResource("./css/Paint.css").toExternalForm());
+                PaintApplication.class.getResource("./Paint.css").toExternalForm());
 
         drawingPane = new DrawingPane();
         drawingPane.getStyleClass().add("drawingPane");

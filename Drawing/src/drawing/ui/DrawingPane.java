@@ -1,4 +1,4 @@
-package drawing;
+package drawing.ui;
 
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.Region;
@@ -8,12 +8,17 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import drawing.handlers.MouseMoveHandler;
+import drawing.handlers.SelectionHandler;
+import drawing.shapes.IShape;
+
 /**
  * Created by lewandowski on 20/12/2017.
  */
 public class DrawingPane extends Pane implements Iterable<IShape>, Observable {
 
-    private MouseMoveHandler mouseMoveHandler;
+    @SuppressWarnings("unused")
+	private MouseMoveHandler mouseMoveHandler;
     private SelectionHandler selectionHandler;
 
     private ArrayList<IShape> shapes;

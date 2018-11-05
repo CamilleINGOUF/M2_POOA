@@ -1,5 +1,10 @@
-package drawing;
+package drawing.ui;
 
+import drawing.handlers.ClearButtonHandler;
+import drawing.handlers.DeleteButtonHandler;
+import drawing.handlers.EllipseButtonHandler;
+import drawing.handlers.RectangleButtonHandler;
+import drawing.handlers.TriangleButtonHandler;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
