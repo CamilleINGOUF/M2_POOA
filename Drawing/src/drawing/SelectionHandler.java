@@ -63,7 +63,7 @@ public class SelectionHandler implements EventHandler<MouseEvent>, Observable {
 		shape.setSelected(true);
 	}
 	
-	private void removeShape(IShape shape)
+	public void removeShape(IShape shape)
 	{
 		selectedShapes.remove(shape);
 		shape.setSelected(false);

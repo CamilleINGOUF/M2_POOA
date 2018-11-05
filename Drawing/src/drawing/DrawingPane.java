@@ -55,9 +55,19 @@ public class DrawingPane extends Pane implements Iterable<IShape>, Observable {
         notifyObservers();
     }
     
+    public void removeShape(IShape shape) {
+    	shapes.remove(shape);
+    	shape.remove(this);
+    	this.selectionHandler.removeShape(shape);
+    	notifyObservers();
+    }
+    
     public void clear() {
     	for(IShape shape : shapes)
+    	{
+    		this.selectionHandler.removeShape(shape);
     		shape.remove(this);
+    	}
         shapes.clear();
         notifyObservers();
     }
