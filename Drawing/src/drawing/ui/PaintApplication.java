@@ -26,7 +26,7 @@ public class PaintApplication extends Application{
         scene = new Scene(root, WIDTH, HEIGHT);
 
         root.getStylesheets().add(
-                PaintApplication.class.getResource("./Paint.css").toExternalForm());
+                PaintApplication.class.getResource("../css/Paint.css").toExternalForm());
 
         drawingPane = new DrawingPane();
         drawingPane.getStyleClass().add("drawingPane");
