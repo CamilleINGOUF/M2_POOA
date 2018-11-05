@@ -20,13 +20,8 @@ public class PaintApplication extends Application{
     private Scene scene;
     private BorderPane root;
     private DrawingPane drawingPane;
-
-    private Button clearButton;
-    private Button rectangleButton;
-    private Button circleButton;
-    private Button triangleButton;
-    private Button deleteButton;
     
+    private ToolBar toolBar;
     private StatusBar statusBar;
 
     @Override
@@ -41,22 +36,8 @@ public class PaintApplication extends Application{
         drawingPane.getStyleClass().add("drawingPane");
         root.setCenter(drawingPane);
 
-        HBox hBox = new HBox();
-        clearButton = new Button("Clear");
-        clearButton.addEventFilter(ActionEvent.ACTION, new ClearButtonHandler(drawingPane));
-        rectangleButton = new Button("Rectangle");
-        rectangleButton.addEventFilter(ActionEvent.ACTION, new RectangleButtonHandler(drawingPane));
-        circleButton = new Button("Circle");
-        circleButton.addEventFilter(ActionEvent.ACTION, new EllipseButtonHandler(drawingPane));
-        triangleButton = new Button("Triangle");
-        triangleButton.addEventFilter(ActionEvent.ACTION, new TriangleButtonHandler(drawingPane));
-        deleteButton = new Button("Delete");
-        deleteButton.addEventFilter(ActionEvent.ACTION, new DeleteButtonHandler(drawingPane));
-        hBox.getChildren().addAll(clearButton, rectangleButton, circleButton,triangleButton, deleteButton);
-        hBox.setPadding(new Insets(5));
-        hBox.setSpacing(5.0);
-        hBox.getStyleClass().add("toolbar");
-        root.setTop(hBox);
+        toolBar = new ToolBar(drawingPane);
+        root.setTop(toolBar);
         
         statusBar = new StatusBar(drawingPane);
         root.setBottom(statusBar);
