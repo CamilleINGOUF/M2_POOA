@@ -10,11 +10,11 @@ import javafx.scene.shape.Rectangle;
  */
 public class RectangleButtonHandler extends ShapeButtonHandler {
 
-    public RectangleButtonHandler(DrawingPane drawingPane) {
-        super(drawingPane);
-    }
+	public RectangleButtonHandler(DrawingPane drawingPane) {
+		super(drawingPane);
+	}
 
-    @Override
+	@Override
     protected IShape createShape() {
         double x = Math.min(originX, destinationX);
         double y = Math.min(originY, destinationY);
