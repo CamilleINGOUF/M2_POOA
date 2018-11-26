@@ -67,10 +67,12 @@ public class MouseMoveHandler implements EventHandler<MouseEvent> {
         }
 
         if (event.getEventType().equals(MouseEvent.MOUSE_RELEASED)) {
-            command = new MoveCommand(selectedShapes, totalOffsetX, totalOffsetY);
-            for(IShape shape : selectedShapes)
-            	shape.offset(-totalOffsetX, -totalOffsetY);
-            this.drawingPane.getHistory().exec(command);
+        	if(totalOffsetX > 0 || totalOffsetY > 0) {
+	            command = new MoveCommand(selectedShapes, totalOffsetX, totalOffsetY);
+	            for(IShape shape : selectedShapes)
+	            	shape.offset(-totalOffsetX, -totalOffsetY);
+	            this.drawingPane.getHistory().exec(command);
+        	}
             selectedShapes = new ArrayList<>();
         }
     }

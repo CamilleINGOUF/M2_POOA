@@ -6,6 +6,7 @@ import drawing.handlers.DeleteButtonHandler;
 import drawing.handlers.EllipseButtonHandler;
 import drawing.handlers.GroupButtonHandler;
 import drawing.handlers.RectangleButtonHandler;
+import drawing.handlers.RedoButtonHandler;
 import drawing.handlers.TriangleButtonHandler;
 import drawing.handlers.UndoButtonHandler;
 import javafx.event.ActionEvent;
@@ -23,6 +24,7 @@ public class ToolBar extends HBox {
 	private Button groupButton;
 	private Button degroupButton;
 	private Button undoButton;
+	private Button redoButton;
 
 	public ToolBar(DrawingPane drawingPane) {
 
@@ -44,9 +46,11 @@ public class ToolBar extends HBox {
 		degroupButton.addEventFilter(ActionEvent.ACTION, new DegroupButtonHandler(drawingPane));
 		undoButton = factory.createButton(ButtonFactory.UNDO);
 		undoButton.addEventFilter(ActionEvent.ACTION, new UndoButtonHandler(drawingPane));
+		redoButton = factory.createButton(ButtonFactory.REDO);
+		redoButton.addEventFilter(ActionEvent.ACTION, new RedoButtonHandler(drawingPane));
 
 		this.getChildren().addAll(clearButton, rectangleButton, circleButton, triangleButton, deleteButton, groupButton,
-				degroupButton, undoButton);
+				degroupButton, undoButton, redoButton);
 		this.setPadding(new Insets(5));
 		this.setSpacing(5.0);
 		this.getStyleClass().add("toolbar");
