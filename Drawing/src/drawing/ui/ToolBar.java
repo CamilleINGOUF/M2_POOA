@@ -1,7 +1,5 @@
 package drawing.ui;
 
-import drawing.commands.ClearCommand;
-import drawing.commands.DeleteCommand;
 import drawing.handlers.ClearButtonHandler;
 import drawing.handlers.DegroupButtonHandler;
 import drawing.handlers.DeleteButtonHandler;
@@ -9,6 +7,7 @@ import drawing.handlers.EllipseButtonHandler;
 import drawing.handlers.GroupButtonHandler;
 import drawing.handlers.RectangleButtonHandler;
 import drawing.handlers.TriangleButtonHandler;
+import drawing.handlers.UndoButtonHandler;
 import javafx.event.ActionEvent;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -23,13 +22,14 @@ public class ToolBar extends HBox {
 	private Button deleteButton;
 	private Button groupButton;
 	private Button degroupButton;
+	private Button undoButton;
 
 	public ToolBar(DrawingPane drawingPane) {
 
 		ButtonFactory factory = new ButtonFactory();
 
 		clearButton = factory.createButton(ButtonFactory.CLEAR);
-		clearButton.addEventFilter(ActionEvent.ACTION, new ClearButtonHandler(new ClearCommand(drawingPane)));
+		clearButton.addEventFilter(ActionEvent.ACTION, new ClearButtonHandler(drawingPane));
 		rectangleButton = factory.createButton(ButtonFactory.RECTANLGE);
 		rectangleButton.addEventFilter(ActionEvent.ACTION, new RectangleButtonHandler(drawingPane));
 		circleButton = factory.createButton(ButtonFactory.CIRCLE);
@@ -37,14 +37,16 @@ public class ToolBar extends HBox {
 		triangleButton = factory.createButton(ButtonFactory.TRIANGLE);
 		triangleButton.addEventFilter(ActionEvent.ACTION, new TriangleButtonHandler(drawingPane));
 		deleteButton = factory.createButton(ButtonFactory.DELETE);
-		deleteButton.addEventFilter(ActionEvent.ACTION, new DeleteButtonHandler(new DeleteCommand(drawingPane)));
+		deleteButton.addEventFilter(ActionEvent.ACTION, new DeleteButtonHandler(drawingPane));
 		groupButton = factory.createButton(ButtonFactory.GROUP);
 		groupButton.addEventFilter(ActionEvent.ACTION, new GroupButtonHandler(drawingPane));
 		degroupButton = factory.createButton(ButtonFactory.DEGROUP);
 		degroupButton.addEventFilter(ActionEvent.ACTION, new DegroupButtonHandler(drawingPane));
+		undoButton = factory.createButton(ButtonFactory.UNDO);
+		undoButton.addEventFilter(ActionEvent.ACTION, new UndoButtonHandler(drawingPane));
 
 		this.getChildren().addAll(clearButton, rectangleButton, circleButton, triangleButton, deleteButton, groupButton,
-				degroupButton);
+				degroupButton, undoButton);
 		this.setPadding(new Insets(5));
 		this.setSpacing(5.0);
 		this.getStyleClass().add("toolbar");

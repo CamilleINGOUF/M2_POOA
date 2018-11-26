@@ -3,6 +3,8 @@ package drawing.handlers;
 import java.util.ArrayList;
 import java.util.List;
 
+import drawing.commands.ICommand;
+import drawing.commands.MoveCommand;
 import drawing.shapes.IShape;
 import drawing.ui.DrawingPane;
 import javafx.event.EventHandler;
@@ -17,8 +19,14 @@ public class MouseMoveHandler implements EventHandler<MouseEvent> {
 
     private double orgSceneX;
     private double orgSceneY;
+    double offsetX;
+    double offsetY;
+    private double totalOffsetX;
+    private double totalOffsetY;
 
     private List<IShape> selectedShapes;
+    
+    private ICommand command;
 
     public MouseMoveHandler(DrawingPane drawingPane) {
         this.drawingPane = drawingPane;
@@ -37,23 +45,32 @@ public class MouseMoveHandler implements EventHandler<MouseEvent> {
 
             selectedShapes = drawingPane.getSelection();
 
+            totalOffsetX = 0;
+            totalOffsetY = 0;
         }
 
         if (event.getEventType().equals(MouseEvent.MOUSE_DRAGGED)) {
             if (selectedShapes.size() == 0)
                 return;
 
-            double offsetX = event.getSceneX() - orgSceneX;
-            double offsetY = event.getSceneY() - orgSceneY;
+            offsetX = event.getSceneX() - orgSceneX;
+            offsetY = event.getSceneY() - orgSceneY;
 
             for(IShape shape : selectedShapes)
             	shape.offset(offsetX, offsetY);
+            
+            totalOffsetX += offsetX;
+            totalOffsetY += offsetY;
             
             orgSceneX += offsetX;
             orgSceneY += offsetY;
         }
 
         if (event.getEventType().equals(MouseEvent.MOUSE_RELEASED)) {
+            command = new MoveCommand(selectedShapes, totalOffsetX, totalOffsetY);
+            for(IShape shape : selectedShapes)
+            	shape.offset(-totalOffsetX, -totalOffsetY);
+            this.drawingPane.getHistory().exec(command);
             selectedShapes = new ArrayList<>();
         }
     }

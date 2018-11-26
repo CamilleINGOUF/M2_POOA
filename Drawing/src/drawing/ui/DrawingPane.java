@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
+import drawing.commands.CommandHistory;
 import drawing.handlers.MouseMoveHandler;
 import drawing.handlers.SelectionHandler;
 import drawing.shapes.IShape;
@@ -24,6 +25,8 @@ public class DrawingPane extends Pane implements Iterable<IShape>, Observable {
     private ArrayList<IShape> shapes;
     
     private List<Observer> observers;
+    
+    private CommandHistory history;
 
     public DrawingPane() {
         clipChildren();
@@ -31,6 +34,7 @@ public class DrawingPane extends Pane implements Iterable<IShape>, Observable {
         mouseMoveHandler = new MouseMoveHandler(this);
         selectionHandler = new SelectionHandler(this);
         observers = new ArrayList<>();
+        history = new CommandHistory();
     }
     
     public List<IShape> getSelection()
@@ -41,6 +45,10 @@ public class DrawingPane extends Pane implements Iterable<IShape>, Observable {
     public List<IShape> getShapes()
     {
     	return shapes;
+    }
+    
+    public CommandHistory getHistory() {
+    	return history;
     }
 
     /**

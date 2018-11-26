@@ -13,12 +13,12 @@ public class ClearCommand implements ICommand {
 	
 	public ClearCommand(DrawingPane receiver) {
 		dPane = receiver;
-		shapes = new ArrayList<>();
+		this.shapes = new ArrayList<>();
 	}
 	
 	@Override
 	public void execute() {
-		shapes = dPane.getShapes();
+		dPane.getShapes().forEach(shape -> this.shapes.add(shape));
 		dPane.clear();
 	}
 

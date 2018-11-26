@@ -47,7 +47,7 @@ public abstract class ShapeButtonHandler implements EventHandler<Event> {
                 destinationY = ((MouseEvent) event).getY();
                 shape = createShape();
                 this.command = new ShapeCommand(drawingPane, shape);
-                this.command.execute();
+                this.drawingPane.getHistory().exec(command);
 
                 drawingPane.removeEventHandler(MouseEvent.MOUSE_PRESSED, this);
                 drawingPane.removeEventHandler(MouseEvent.MOUSE_RELEASED, this);
