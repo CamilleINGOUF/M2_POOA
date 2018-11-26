@@ -28,7 +28,7 @@ public class ToolBar extends HBox {
 
 	public ToolBar(DrawingPane drawingPane) {
 
-		ButtonFactory factory = new ButtonFactory();
+		ButtonFactory factory = new ButtonFactory(ButtonFactory.TEXT_ONLY);
 
 		clearButton = factory.createButton(ButtonFactory.CLEAR);
 		clearButton.addEventFilter(ActionEvent.ACTION, new ClearButtonHandler(drawingPane));

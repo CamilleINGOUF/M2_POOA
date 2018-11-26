@@ -3,4 +3,5 @@
 <typeInfo handle="=Drawing/\/usr\/share\/java\/openjfx\/jre\/lib\/ext\/jfxrt.jar&lt;javafx.scene.layout(HBox.class[HBox" modifiers="33" timestamp="1523003353000"/>
 <typeInfo handle="=Drawing/src&lt;drawing.shapes{IShape.java[IShape" modifiers="513" timestamp="1541422627356"/>
 <typeInfo handle="=Drawing/\/usr\/lib\/jvm\/java-8-openjdk-amd64\/jre\/lib\/rt.jar&lt;com.sun.corba.se.pept.transport(EventHandler.class[EventHandler" modifiers="1537" timestamp="1532373288000"/>
+<typeInfo handle="=Drawing/src&lt;drawing.commands{ICommand.java[ICommand" modifiers="513" timestamp="1543236693560"/>
 </typeInfoHistroy>

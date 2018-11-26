@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="ComportementPoignard"/>
-<fullyQualifiedTypeName name="Chevalier"/>
-<fullyQualifiedTypeName name="ComportementEpee"/>
-<fullyQualifiedTypeName name="Troll"/>
-<fullyQualifiedTypeName name="ComportementHache"/>
-<fullyQualifiedTypeName name="Personnage"/>
-<fullyQualifiedTypeName name="java.awt.geom.Point2D"/>
-<fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="FactoryMethod.Animal"/>
-<fullyQualifiedTypeName name="AbstractFactory.DocumentPDF"/>
-<fullyQualifiedTypeName name="AbstractFactory.EditorPDF"/>
-<fullyQualifiedTypeName name="AbstractFactory.EditorCSV"/>
-<fullyQualifiedTypeName name="AbstractFactory.DocumentCSV"/>
-<fullyQualifiedTypeName name="AbstractFactory.DocumentFactory"/>
-<fullyQualifiedTypeName name="AbstractFactory.Extension"/>
 <fullyQualifiedTypeName name="AbstractFactory.EditorFactory"/>
 <fullyQualifiedTypeName name="AbstractFactory.WindowsButton"/>
 <fullyQualifiedTypeName name="AbstractFactory.WindowsCheckbox"/>
@@ -52,12 +37,27 @@
 <fullyQualifiedTypeName name="javafx.scene.image.Image"/>
 <fullyQualifiedTypeName name="javafx.scene.image.ImageView"/>
 <fullyQualifiedTypeName name="javafx.scene.control.Button"/>
+<fullyQualifiedTypeName name="drawing.ui.PaintApplication"/>
+<fullyQualifiedTypeName name="drawing.handlers.RectangleButtonHandler"/>
+<fullyQualifiedTypeName name="drawing.commands.RectangleCommand"/>
+<fullyQualifiedTypeName name="drawing.commands.ShapeCommand"/>
+<fullyQualifiedTypeName name="drawing.handlers.DeleteCommand"/>
+<fullyQualifiedTypeName name="drawing.shapes.ShapeGroup"/>
+<fullyQualifiedTypeName name="java.util.Stack"/>
+<fullyQualifiedTypeName name="drawing.commands.CommandHistory"/>
+<fullyQualifiedTypeName name="drawing.commands.ClearCommand"/>
+<fullyQualifiedTypeName name="drawing.commands.GroupCommand"/>
+<fullyQualifiedTypeName name="drawing.commands.DegroupCommand"/>
+<fullyQualifiedTypeName name="drawing.commands.DeleteCommand"/>
+<fullyQualifiedTypeName name="drawing.shapes.IShape"/>
+<fullyQualifiedTypeName name="drawing.commands.ICommand"/>
+<fullyQualifiedTypeName name="javax.swing.MutableComboBoxModel"/>
+<fullyQualifiedTypeName name="drawing.commands.MoveCommand"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="javafx.event.EventHandler"/>
 <fullyQualifiedTypeName name="javafx.event.ActionEvent"/>
 <fullyQualifiedTypeName name="drawing.ui.DrawingPane"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="drawing.shapes.IShape"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="drawing.shapes.ShapeGroup"/>
-<fullyQualifiedTypeName name="drawing.ui.PaintApplication"/>
 <fullyQualifiedTypeName name="drawing.ui.ButtonFactory"/>
+<fullyQualifiedTypeName name="javafx.scene.shape.Ellipse"/>
 </qualifiedTypeNameHistroy>
