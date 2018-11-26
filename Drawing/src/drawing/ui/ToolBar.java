@@ -1,5 +1,6 @@
 package drawing.ui;
 
+import drawing.commands.ClearCommand;
 import drawing.handlers.ClearButtonHandler;
 import drawing.handlers.DegroupButtonHandler;
 import drawing.handlers.DeleteButtonHandler;
@@ -27,7 +28,7 @@ public class ToolBar extends HBox {
 		ButtonFactory factory = new ButtonFactory();
 		
 		clearButton = factory.createButton(ButtonFactory.CLEAR);
-        clearButton.addEventFilter(ActionEvent.ACTION, new ClearButtonHandler(drawingPane));
+        clearButton.addEventFilter(ActionEvent.ACTION, new ClearButtonHandler(new ClearCommand(drawingPane)));
         rectangleButton = factory.createButton(ButtonFactory.RECTANLGE);
         rectangleButton.addEventFilter(ActionEvent.ACTION, new RectangleButtonHandler(drawingPane));
         circleButton = factory.createButton(ButtonFactory.CIRCLE);

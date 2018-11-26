@@ -25,7 +25,7 @@
 		<item value="1|Ubuntu|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 		<item value="591" key="DIALOG_HEIGHT"/>
 		<item value="129" key="DIALOG_X_ORIGIN"/>
-		<item value="-6" key="DIALOG_Y_ORIGIN"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>

@@ -38,6 +38,10 @@ public class DrawingPane extends Pane implements Iterable<IShape>, Observable {
     	return selectionHandler.getShapes();
     }
 
+    public List<IShape> getShapes()
+    {
+    	return shapes;
+    }
 
     /**
      * Clips the children of this {@link Region} to its current size.
