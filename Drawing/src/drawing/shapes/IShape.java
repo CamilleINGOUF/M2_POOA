@@ -16,4 +16,6 @@ public interface IShape{
 	public void setSelected(boolean flag);
 
 	public void remove(DrawingPane drawingPane);
+	
+	public IShape clone();
 }

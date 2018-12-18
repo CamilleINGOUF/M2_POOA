@@ -76,4 +76,9 @@ public class ShapeGroup implements IShape {
 			s.remove(drawingPane);
 	}
 
+	public IShape clone() {
+		ShapeGroup sg = new ShapeGroup();
+		this.shapes.forEach(shape -> sg.addShape(shape.clone()));
+		return sg;
+	}
 }

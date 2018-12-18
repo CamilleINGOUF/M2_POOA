@@ -59,4 +59,11 @@ public class ShapeAdapter implements IShape {
 	public Shape getSelectedShape() {
 		return shape;
 	}
+	
+	public IShape clone() {
+		Shape s = Shape.union(shape, shape);
+        s.getStyleClass().addAll(shape.getStyleClass());
+        s.getStyleClass().remove("selected");
+		return new ShapeAdapter(s);
+	}
 }

@@ -1,6 +1,7 @@
 package drawing.ui;
 
 import drawing.handlers.ClearButtonHandler;
+import drawing.handlers.CloneButtonHandler;
 import drawing.handlers.DegroupButtonHandler;
 import drawing.handlers.DeleteButtonHandler;
 import drawing.handlers.EllipseButtonHandler;
@@ -25,10 +26,11 @@ public class ToolBar extends HBox {
 	private Button degroupButton;
 	private Button undoButton;
 	private Button redoButton;
+	private Button cloneButton;
 
 	public ToolBar(DrawingPane drawingPane) {
 
-		ButtonFactory factory = new ButtonFactory(ButtonFactory.TEXT_ONLY);
+		ButtonFactory factory = new ButtonFactory(ButtonFactory.BOTH);
 
 		clearButton = factory.createButton(ButtonFactory.CLEAR);
 		clearButton.addEventFilter(ActionEvent.ACTION, new ClearButtonHandler(drawingPane));
@@ -48,9 +50,11 @@ public class ToolBar extends HBox {
 		undoButton.addEventFilter(ActionEvent.ACTION, new UndoButtonHandler(drawingPane));
 		redoButton = factory.createButton(ButtonFactory.REDO);
 		redoButton.addEventFilter(ActionEvent.ACTION, new RedoButtonHandler(drawingPane));
+		cloneButton = factory.createButton(ButtonFactory.CLONE);
+		cloneButton.addEventFilter(ActionEvent.ACTION, new CloneButtonHandler(drawingPane));
 
 		this.getChildren().addAll(clearButton, rectangleButton, circleButton, triangleButton, deleteButton, groupButton,
-				degroupButton, undoButton, redoButton);
+				degroupButton, undoButton, redoButton, cloneButton);
 		this.setPadding(new Insets(5));
 		this.setSpacing(5.0);
 		this.getStyleClass().add("toolbar");

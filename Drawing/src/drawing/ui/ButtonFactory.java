@@ -14,13 +14,14 @@ public class ButtonFactory {
 	public static final String[] DEGROUP = new String[] {"Degroup","degroup.png"};
 	public static final String[] UNDO = new String[] {"Undo","undo.png"};
 	public static final String[] REDO = new String[] {"Redo","redo.png"};
+	public static final String[] CLONE = new String[] {"Clone","clone.png"};
 
 	public static final int TEXT_ONLY = 0;
 	public static final int ICONS_ONLY = 1;
 	public static final int BOTH = 2;
 	
 	private int style;
-	
+		
 	public ButtonFactory() {
 		style = BOTH;
 	}
